@@ -10,7 +10,6 @@
 #include "drawcanvas.h"
 #include "functionplottermaindialog.h"
 #include "testtimer.h"
-#include "richelbilderbeekprogram.h"
 #include "trace.h"
 #pragma GCC diagnostic pop
 
@@ -97,18 +96,9 @@ ribi::Help ribi::FunctionPlotterMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::FunctionPlotterMenuDialog::GetProgram() const noexcept
-{
-  boost::shared_ptr<const ribi::Program> p {
-    new ribi::ProgramFunctionPlotter
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::FunctionPlotterMenuDialog::GetVersion() const noexcept
 {
-  return "2.2";
+  return "2.3";
 }
 
 std::vector<std::string> ribi::FunctionPlotterMenuDialog::GetVersionHistory() const noexcept
@@ -116,9 +106,10 @@ std::vector<std::string> ribi::FunctionPlotterMenuDialog::GetVersionHistory() co
   return {
     "2010-xx-xx: version 1.0: initial Windows-only version",
     "2010-xx-xx: version 1.1: added integration",
-    "2013-12-05: version 2.0: port to Qt"
-    "2014-02-06: version 2.1: added command-line version"
-    "2014-07-04: version 2.2: desktop version plots nothing if function cannot be parsed"
+    "2013-12-05: version 2.0: port to Qt",
+    "2014-02-06: version 2.1: added command-line version",
+    "2014-07-04: version 2.2: desktop version plots nothing if function cannot be parsed",
+    "2016-03-02: version 2.3: moved to own GitHub",
   };
 }
 
