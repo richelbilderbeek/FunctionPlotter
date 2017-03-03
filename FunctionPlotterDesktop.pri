@@ -1,4 +1,4 @@
-include(ToolFunctionPlotterConsole.pri)
+include(FunctionPlotterConsole.pri)
 
 SOURCES += \
     $$PWD/qtfunctionplottermenudialog.cpp \

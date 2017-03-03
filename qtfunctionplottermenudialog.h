@@ -26,10 +26,6 @@ private slots:
 
 private:
   Ui::QtFunctionPlotterMenuDialog *ui;
-
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
 };
 
 } //~namespace ribi
