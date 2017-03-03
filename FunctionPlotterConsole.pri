@@ -1,13 +1,12 @@
-INCLUDEPATH += \
-    ../FunctionPlotter
+INCLUDEPATH += $$PWD
 
 SOURCES += \
-    ../FunctionPlotter/functionplottermenudialog.cpp \
-    ../FunctionPlotter/functionplottermaindialog.cpp
+    $$PWD/functionplottermenudialog.cpp \
+    $$PWD/functionplottermaindialog.cpp
 
 HEADERS += \
-    ../FunctionPlotter/functionplottermenudialog.h \
-    ../FunctionPlotter/functionplottermaindialog.h
+    $$PWD/functionplottermenudialog.h \
+    $$PWD/functionplottermaindialog.h
 
 RESOURCES += \
-    ../FunctionPlotter/FunctionPlotter.qrc
+    $$PWD/FunctionPlotter.qrc
