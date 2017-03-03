@@ -9,15 +9,10 @@
 
 #include "drawcanvas.h"
 #include "functionplottermaindialog.h"
-#include "testtimer.h"
-#include "trace.h"
 #pragma GCC diagnostic pop
 
 int ribi::FunctionPlotterMenuDialog::ExecuteSpecific(const std::vector<std::string>& argv) noexcept
 {
-  #ifndef NDEBUG
-  Test();
-  #endif
   const int argc = static_cast<int>(argv.size());
   if (argc != 3 || (argv[1] != "-e" && argv[1] != "--equation"))
   {
@@ -75,8 +70,6 @@ ribi::About ribi::FunctionPlotterMenuDialog::GetAbout() const noexcept
     GetVersionHistory());
   a.AddLibrary("Canvas version: " + Canvas::GetVersion());
   a.AddLibrary("DrawCanvas version: " + DrawCanvas::GetVersion());
-  a.AddLibrary("TestTimer version: " + TestTimer::GetVersion());
-  a.AddLibrary("Trace version: " + Trace::GetVersion());
   a.AddLibrary("Warp's FunctionParser version: 4.4.3");
   return a;
 }
@@ -112,15 +105,3 @@ std::vector<std::string> ribi::FunctionPlotterMenuDialog::GetVersionHistory() co
     "2016-03-02: version 2.3: moved to own GitHub",
   };
 }
-
-#ifndef NDEBUG
-void ribi::FunctionPlotterMenuDialog::Test() noexcept
-{
-  {
-    static bool is_tested{false};
-    if (is_tested) return;
-    is_tested = true;
-  }
-  const TestTimer test_timer(__func__,__FILE__,1.0);
-}
-#endif

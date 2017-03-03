@@ -11,7 +11,7 @@ namespace ribi {
 
 class QtFunctionPlotterMenuDialog : public QtHideAndShowDialog
 {
-  Q_OBJECT
+  Q_OBJECT //!OCLINT
     
 public:
   explicit QtFunctionPlotterMenuDialog(QWidget *parent = 0);

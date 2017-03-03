@@ -40,7 +40,7 @@ script:
   # Console
   - qmake -qt=qt5 FunctionPlotterConsole.pro
   - make debug
-  - ./FunctionPlotterConsole
+  - ./FunctionPlotterConsole --equation "10 + (8 * sin(x / 10))"
   # Desktop
   - qmake -qt=qt5 FunctionPlotterDesktop.pro
   - make debug

@@ -14,7 +14,7 @@ namespace ribi {
 
 class QtFunctionPlotterPlot2dDialog : public QtHideAndShowDialog
 {
-    Q_OBJECT
+    Q_OBJECT //!OCLINT
     
 public:
     explicit QtFunctionPlotterPlot2dDialog(QWidget *parent = 0);
