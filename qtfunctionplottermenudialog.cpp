@@ -7,7 +7,6 @@
 #include "qtfunctionplotterplot2ddialog.h"
 #include "qtfunctionplottermenudialog.h"
 #include "ui_qtfunctionplottermenudialog.h"
-#include "testtimer.h"
 #include "trace.h"
 #pragma GCC diagnostic pop
 
